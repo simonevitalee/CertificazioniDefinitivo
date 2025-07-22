@@ -1,29 +1,20 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy Azure Static Web App
 
 on:
   push:
     branches:
-      - main
+      - main  # o il tuo branch di produzione
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Get ID Token
-        id: idtoken
-        run: |
-          echo "id_token=$(curl -H 'Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN' $ACTIONS_ID_TOKEN_REQUEST_URL)" >> $GITHUB_OUTPUT
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_FLOWER_0884CA703 }}
           action: "upload"
-          app_location: "/"         # La root della repo, dove ci sono i file statici
-          output_location: "/"      # Stessa root, poiché i file sono pronti da pubblicare così
-          github_id_token: ${{ steps.idtoken.outputs.id_token }}
+          app_location: "/"  # dove si trova index.html
