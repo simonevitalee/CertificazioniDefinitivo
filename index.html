@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <title>Upload Excel</title>
+
+</head>
+
+<body>
+  <div style="display: flex; justify-content: left;  margin-top: 25px; margin-bottom: 25px;">
+    <img src="img/getsitelogo.png" alt="Logo" class="logo" />
+  </div>
+  <div class="container">
+
+
+
+
+    <!-- <div id="spinner" class="spinner" style="display: none;"></div> -->
+    <h2 style="margin-bottom: 30px;">Carica il file delle certificazioni in formato ".xlsx"</h2>
+    <form id="uploadForm">
+      <label for="fileInput" class="button">Seleziona il file Excel</label>
+      <input type="file" id="fileInput" accept=".xlsx" required/>
+      <div class="file-name" id="fileName">Nessun file selezionato</div>
+      <button id="bottoneToCheck" class="button disabled" type="submit">Carica il File</button>
+      <div id="messaggio"></div>
+    </form>
+
+    
+
+    <!-- 🔽 Link per scaricare il file di esempio -->
+    <a href="Esempio_Certificati.xlsx" download class="download-link">
+      Scarica il file di esempio
+    </a>
+
+
+  </div>
+
+  <div class="container" style="margin-top: 40px;">
+    <h2 style="margin-bottom: 0px;">Clicca sotto per aggiornare il report</h2>
+    <p class="file-name2">Questo processo ha un tempo stimato di 6 minuti</p>
+    <button class="button" id="triggerPipelineBtn">Aggiorna ora</button>
+    <div id="message" class="message"></div>
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

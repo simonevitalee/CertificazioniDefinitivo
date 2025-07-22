@@ -1,0 +1,233 @@
+ body {
+     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #f62702 0%, #A4262C 100%);
+     background-attachment: fixed;
+     margin: 0;
+     padding: 0;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center; */
+     font-family: sans-serif;
+     background: linear-gradient(135deg, #b32e30 0%, #d62e2e 50%, #ec1c24 100%);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+
+ }
+
+ .container {
+     background: white;
+     margin: auto;
+     margin-top: 0px;
+     display: flex;
+     justify-content: center;
+     padding: 0px 0px 20px 0px;
+     border-radius: 4px;
+     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+     width: 100%;
+     height: 100%;
+     max-width: 720px;
+     text-align: center;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .logo {
+     width: 120px;
+     margin-bottom: 12px;
+     justify-content: left;
+     display: flex;
+     margin: 0;
+     background-color: transparent;
+ }
+
+ h2 {
+     font-size: 1.4em;
+     margin-bottom: 20px;
+     font-weight: 600;
+     color: #2d3748;
+     line-height: 1.2;
+ }
+
+ input[type="file"] {
+     display: none;
+ }
+
+ .custom-file-label {
+     display: inline-block;
+     padding: 14px 24px;
+     background: linear-gradient(135deg, #f62702 0%, #A4262C 100%);
+     border-radius: 12px;
+     border: 2px dashed rgba(255, 255, 255, 0.4);
+     color: white;
+     font-weight: 600;
+     font-size: 1em;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+ }
+
+ /* .custom-file-label:hover {
+     background: rgb(138, 19, 25);
+     transform: scale(1.02);
+ } */
+
+ .file-name {
+     margin-top: 25px;
+     font-size: 0.9em;
+     color: #4a5568;
+     font-weight: 500;
+ }
+
+ .file-name2 {
+     font-size: 0.9em;
+     color: #4a5568;
+     font-weight: 500;
+ }
+
+ .button {
+     margin-top: 20px;
+     background: #b32e30;
+     border: none;
+     padding: 12px 28px;
+     border-radius: 40px;
+     font-size: 0.95em;
+     color: white;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+     letter-spacing: 0.4px;
+     text-transform: uppercase;
+     border-radius: 4PX;
+ }
+
+ .button .select-file {
+     margin-bottom: 10px;
+ }
+
+ .button:hover {
+     background: rgb(138, 19, 25);
+ }
+
+ /* button:active {
+     transform: scale(1.01);
+ } */
+
+ .message {
+     margin-top: 18px;
+     padding: 12px 16px;
+     font-weight: 600;
+     font-size: 0.9em;
+     border-radius: 10px;
+     border: 2px solid;
+     background: #ffffff;
+     display: none;
+ }
+
+ .message.success {
+     border-color: #2ecc71;
+     color: #2ecc71;
+ }
+
+ .message.error {
+     border-color: #e74c3c;
+     color: #e74c3c;
+ }
+
+ .message.info {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.message.warning {
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+ a.download-link {
+     margin-top: 20px;
+     color: #b32e30;
+     font-weight: 600;
+     text-decoration: none;
+ }
+
+ a.download-link:hover {
+     text-decoration: underline;
+ }
+
+
+ .disabled {
+     background-color: #ccc !important;
+     color: #666 !important;
+     cursor: not-allowed !important;
+ }
+
+ @media (max-width: 500px) {
+     .container {
+         padding: 0px 0px 20px 0px;
+     }
+
+     .logo-wrapper {
+         display: flex;
+         justify-content: left;
+         align-items: left;
+     }
+
+     .logo {
+         width: 120px;
+     }
+
+     h2 {
+         font-size: 1.2em;
+         margin-bottom: 28px;
+     }
+
+     button {
+         padding: 10px 20px;
+         font-size: 0.9em;
+     }
+
+     .header {
+         align-items: center;
+         display: inline-flex;
+         justify-content: space-between;
+         width: 100%;
+         padding: 20px;
+         position: relative;
+         /* padding or margin if needed */
+     }
+
+     .spinner {
+         border: 4px solid #f3f3f3;
+         border-top: 4px solid #0078d4;
+         border-radius: 50%;
+         width: 30px;
+         height: 30px;
+         animation: spin 1s linear infinite;
+         margin: 10px auto;
+     }
+
+     @keyframes spin {
+         0% {
+             transform: rotate(0deg);
+         }
+
+         100% {
+             transform: rotate(360deg);
+         }
+     }
+
+     .button-update {
+         background: linear-gradient(135deg, #f62702 0%, #A4262C 100%);
+         border: none;
+         border-radius: 4px;
+         color: white;
+         font-weight: 600;
+         cursor: pointer;
+         position: absolute;
+     }
+
+
+
+ }
+
+ 
